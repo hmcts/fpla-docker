@@ -56,6 +56,8 @@ To add users:
 
 `IDAM_ADMIN_USER` and `IDAM_ADMIN_PASSWORD` details can be found on confluence.
 
+To enable stubbing of the ```PROXY_PAYMENTS``` set the ```PROXY_PAYMENTS_STUB``` environment variable to the desired url. 
+
 ----
 
 This project should aim to keep upto date with the [base CCD Docker project](https://github.com/hmcts/ccd-docker)
