@@ -22,7 +22,7 @@ done
 roles=("clerk")
 for role in "${roles[@]}"
 do
-	${dir}/utils/idam-add-role.sh "caseworker-adoption-${role}"
+  ${dir}/utils/idam-add-role.sh "caseworker-adoption-${role}"
   ${dir}/utils/ccd-add-role.sh "caseworker-adoption-${role}"
 done
 
