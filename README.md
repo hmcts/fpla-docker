@@ -40,6 +40,12 @@ Creating and starting the containers:
 ./ccd compose up -d
 ```
 
+Note:
+Using Expert UI by default. If you need CCD UI service you can start it with below command
+```bash
+./ccd compose up --scale ccd-case-management-web=1 -d
+```
+
 Scripts to create FPLA test users and import FPLA CCD definitions are located in bin directory.
 
 To add services:
