@@ -13,6 +13,8 @@ services:
       PRINT_SERVICE_URL_REMOTE: https://return-case-doc-ccd.nonprod.platform.hmcts.net
       DM_GATEWAY_BASE_URL: https://api-gateway.dev.dm.reform.hmcts.net
       OAUTH2_CLIENT_ID: ccd_gateway
+      SHUTTER_REDIRECT_URL: http://localhost:3333
+      SHUTTER_REDIRECT_WAIT: 10
     ports:
       - 3451:3451
     depends_on:
