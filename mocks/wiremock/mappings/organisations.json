@@ -7,7 +7,7 @@
         "equalTo": "ACTIVE"
       },
       "returnRoles": {
-        "equalTo": false
+        "equalTo": "false"
       }
     }
   },
