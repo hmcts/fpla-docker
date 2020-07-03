@@ -21,6 +21,7 @@ services:
       - ccd-api-gateway
     networks:
       - ccd-network
+    scale: 0
 
   ccd-admin-web:
     image: "${CCD_ADMIN_WEB_USE_LOCAL-hmctspublic.azurecr.io/}ccd/admin-web:${CCD_ADMIN_WEB_TAG:-latest}"
