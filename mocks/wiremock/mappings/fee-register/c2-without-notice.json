@@ -16,7 +16,7 @@
         "equalTo": "family court"
       },
       "keyword": {
-        "equalTo": "without-notice"
+        "equalTo": "GeneralAppWithoutNotice"
       },
       "service": {
         "equalTo": "other"
