@@ -16,5 +16,6 @@
   {"email": "sam_citizen@mailinator.com", "roles": "citizen", "lastName": "Citizen"},
   {"email": "adoptionclerk@mailinator.com", "roles": "caseworker,caseworker-adoption,caseworker-adoption-clerk", "lastName": "Clerk"},
   {"email": "judiciary-only@mailnesia.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-judiciary", "lastName": "(judiciary)"},
-  {"email": "gatekeeper-only@mailnesia.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-gatekeeper", "lastName": "(gatekeeper)"}
+  {"email": "gatekeeper-only@mailnesia.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-gatekeeper", "lastName": "(gatekeeper)"},
+  {"email": "lasol@mailinator.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-localAuthority", "lastName": "LA"}
 ]
