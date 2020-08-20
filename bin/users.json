@@ -9,6 +9,7 @@
   {"email": "raghu@wiltshire.gov.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor", "lastName": "(local-authority)"},
   {"email": "sam@wiltshire.gov.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor", "lastName": "(local-authority)"},
   {"email": "hmcts-admin@example.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-courtadmin,caseworker-publiclaw-bulkscan", "lastName": "(hmcts-admin)"},
+  {"email": "hmcts-superuser@example.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-courtadmin,caseworker-publiclaw-bulkscan,caseworker-publiclaw-superuser", "lastName": "(hmcts-superuser)"},
   {"email": "cafcass@example.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-cafcass", "lastName": "(cafcass)"},
   {"email": "judiciary@mailnesia.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-courtadmin,caseworker-publiclaw-judiciary,caseworker-publiclaw-gatekeeper", "lastName": "(judiciary)"},
   {"email": "gatekeeper@mailnesia.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-gatekeeper,caseworker-publiclaw-courtadmin", "lastName": "(gatekeeper)"},
