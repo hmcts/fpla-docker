@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "GET",
-    "urlPattern": "/payments/credit-account-payments/([\\w-]*)/statuses"
+    "urlPattern": "/credit-account-payments/([\\w-]*)/statuses"
   },
   "response": {
     "status": 200,
