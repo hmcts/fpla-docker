@@ -21,6 +21,7 @@ services:
 
       SERVICES_EM_ANNO_API: http://ccd-api-gateway:3453
       REDISCLOUD_URL: http://dummyrediscloudurl
+      LAUNCH_DARKLY_CLIENT_ID: dummy
 
       FEATURE_REDIS_ENABLED: "false"
       FEATURE_APP_INSIGHTS_ENABLED: "false"
