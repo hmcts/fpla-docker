@@ -8,5 +8,5 @@ jq -r '.[] | .email + " " + .roles + " " +  .lastName' ${dir}/users.json | while
   ${dir}/utils/idam-create-caseworker.sh $args
 done
 
-echo "\nGenerating local user mappings"
+printf "\nGenerating local wiremock users mappings\n"
 ${dir}/utils/generate-local-user-mappings.sh

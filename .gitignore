@@ -11,5 +11,5 @@
 build/
 
 
-mocks/wiremock/__files/mockResponse.json
+mocks/wiremock/__files/organisationUsers.json
 mocks/wiremock/mappings/user-by-email/*

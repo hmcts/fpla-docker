@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/case-assignments"
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "assignments/postAssignmentsResponse.json"
+  }
+}
