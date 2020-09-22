@@ -9,8 +9,8 @@ mappings_template_dir=${root_dir}/mocks/wiremock/templates
 user_template_file=${mappings_template_dir}/userTemplate.json
 mock_user_by_email_template=${mappings_template_dir}/userByEmail.json
 mock_user_by_email_dir=${root_dir}/mocks/wiremock/mappings/user-by-email
-mock_file=${root_dir}/mocks/wiremock/__files/mockResponse.json
-mock_tmp_file=${root_dir}/mocks/wiremock/__files/mockResponse.tmp.json
+mock_file=${root_dir}/mocks/wiremock/__files/organisationUsers.json
+mock_tmp_file=${root_dir}/mocks/wiremock/__files/organisationUsers.tmp.json
 users_file=${root_dir}/bin/users.json
 users_ids_tmp_file=${dir}/userIds.json.tmp
 

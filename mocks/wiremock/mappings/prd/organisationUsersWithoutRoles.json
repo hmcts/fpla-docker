@@ -4,10 +4,10 @@
     "urlPath": "/refdata/external/v1/organisations/users",
     "queryParameters": {
       "status": {
-        "equalTo": "active"
+        "equalTo": "ACTIVE"
       },
       "returnRoles": {
-        "equalTo": "true"
+        "equalTo": "false"
       }
     }
   },
@@ -16,6 +16,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "mockResponse.json"
+    "bodyFileName": "organisationUsers.json"
   }
 }
