@@ -2,8 +2,8 @@
   "request": {
     "method": "GET",
     "urlPath": "/refdata/external/v1/organisations/users/accountId",
-    "queryParameters": {
-      "email": {
+    "headers": {
+      "UserEmail": {
         "equalTo": "[email]"
       }
     }
