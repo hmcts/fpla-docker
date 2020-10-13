@@ -22,6 +22,21 @@
         "status": 200,
         "body": "{\"status\": \"UP\"}"
       }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/letters/67ff45e6-5a7d-4759-a997-d0ec884e06e5",
+        "queryParameters": {
+          "include-additional-info": {
+            "equalTo": "false"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\"additional_data\": {}, \"checksum\": \"string\", \"copies\": 0, \"created_at\": \"2020-10-13T09:57:53.943Z\", \"id\": \"67ff45e6-5a7d-4759-a997-d0ec884e06e5\", \"message_id\": \"string\", \"printed_at\": \"2020-10-13T09:57:53.943Z\", \"sent_to_print_at\": \"2020-10-13T09:57:53.943Z\", \"status\": \"Created\"}"
+      }
     }
   ]
 }
