@@ -15,7 +15,7 @@ apiToken=$(${dir}/idam-authenticate.sh "${IDAM_ADMIN_USER}" "${IDAM_ADMIN_PASSWO
 
 echo -e "\nUpdate service with ID: ${CLIENT_ID}\nLabel: ${LABEL}\nClient Secret: ${CLIENT_SECRET}\nRedirect URL: ${REDIRECT_URL}\n"
 
-STATUS=$(curl --retry 3 --silent --output /dev/null --write-out '%{http_code}' -X PUT -H 'Content-Type: application/json' -H "Authorization: AdminApiAuthToken ${apiToken}" \
+STATUS=$(curl --silent --output /dev/null --write-out '%{http_code}' -X PUT -H 'Content-Type: application/json' -H "Authorization: AdminApiAuthToken ${apiToken}" \
   ${IDAM_API_BASE_URL:-http://localhost:5000}/services/${CLIENT_ID} \
   -d '{
     "allowedRoles": [],
