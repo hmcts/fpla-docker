@@ -11,7 +11,7 @@ serviceToken=$(${dir}/idam-lease-service-token.sh ccd_gw $(docker run --rm toolb
 
 echo "Creating CCD role: ${role}"
 
-curl --insecure --fail --show-error --silent --output /dev/null -X PUT \
+curl --retry 3 --insecure --fail --show-error --silent --output /dev/null -X PUT \
   ${CCD_DEFINITION_STORE_API_BASE_URL:-http://localhost:4451}/api/user-role \
   -H "Authorization: Bearer ${userToken}" \
   -H "ServiceAuthorization: Bearer ${serviceToken}" \
