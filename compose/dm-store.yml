@@ -61,7 +61,7 @@ services:
       PACKAGES_VERSION: unknown
       ENABLE_DB_MIGRATE: "true"
     #      debug mode
-    #    JAVA_OPTS: -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
+    # JAVA_TOOL_OPTIONS: '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'
     depends_on:
       - ccd-shared-database
       - service-auth-provider-api
@@ -69,7 +69,7 @@ services:
     ports:
       - 4506:8080
     #   debug port exposed
-    #   - 5006:5005
+    # - 5006:5005
     networks:
       - ccd-network
 
