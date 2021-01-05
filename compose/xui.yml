@@ -25,7 +25,7 @@ services:
       REDISCLOUD_URL: http://dummyrediscloudurl
 
       #real LAUNCH_DARKLY_CLIENT_ID must be set to enable share a case functionality
-      LAUNCH_DARKLY_CLIENT_ID: dummy
+      LAUNCH_DARKLY_CLIENT_ID: "${XUI_LD_CLIENT_ID:-dummy}"
 
       FEATURE_REDIS_ENABLED: "false"
       FEATURE_APP_INSIGHTS_ENABLED: "false"
