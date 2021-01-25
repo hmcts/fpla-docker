@@ -156,6 +156,7 @@ services:
       - 5555:5555
     networks:
       - ccd-network
+    scale: 0
     #provide custom Idam roles when using Idam Stub.
     #uncomment and add the desired roles to idam_stub_get_details_custom.json. Then restart the Stub Service
 #    volumes:
