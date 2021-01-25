@@ -22,6 +22,7 @@ services:
     image: hmctsprivate.azurecr.io/idam/shared-db:latest
   smtp-server:
     image: mailhog/mailhog
+    scale: 0
   idam-api:
     image: hmctspublic.azurecr.io/idam/api:stable
     depends_on:
@@ -39,3 +40,4 @@ services:
     depends_on:
       idam-api:
         condition: service_started
+    scale: 0

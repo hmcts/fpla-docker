@@ -63,6 +63,7 @@ services:
     - ccd-user-profile-api
     networks:
     - ccd-network
+    scale: 0
 
   ccd-api-gateway:
     image: "${CCD_API_GATEWAY_USE_LOCAL-hmctspublic.azurecr.io/}ccd/api-gateway-web:${CCD_API_GATEWAY_TAG:-latest}"
