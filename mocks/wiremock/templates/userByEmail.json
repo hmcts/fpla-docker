@@ -4,7 +4,8 @@
     "urlPath": "/refdata/external/v1/organisations/users/accountId",
     "headers": {
       "UserEmail": {
-        "equalTo": "[email]"
+        "equalTo": "[email]",
+        "caseInsensitive": true
       }
     }
   },
