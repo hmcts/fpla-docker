@@ -7,10 +7,12 @@ services:
     image: rodolpheche/wiremock
     volumes:
       - ./../mocks/wiremock:/home/wiremock:rw
+      - ./../mocks/extensions:/var/wiremock/extensions:rw
     ports:
       - 8765:8080
     networks:
       - ccd-network
+    command: --extensions="com.github.masonm.JwtMatcherExtension"
 
 networks:
   ccd-network:

@@ -1,0 +1,22 @@
+{
+  "organisationIdentifier": "10001",
+  "name": "External solicitors",
+  "status": "ACTIVE",
+  "sraRegulated": false,
+  "superUser": {
+    "firstName": "External",
+    "lastName": "Solicitor",
+    "email": "external.solicitor@solicitors.uk"
+  },
+  "paymentAccount": ["account1"],
+  "contactInformation": [
+    {
+      "addressLine1": "Flat 1, Pinnacle Apartments",
+      "addressLine2": "Saffron Central Square 11",
+      "townCity": "London",
+      "county": "United Kingdom",
+      "postCode": "CR0 2GE",
+      "dxAddress": []
+    }
+  ]
+}
