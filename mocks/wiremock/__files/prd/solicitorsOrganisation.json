@@ -1,0 +1,22 @@
+{
+  "organisationIdentifier": "ORGEXT",
+  "name": "Private solicitors",
+  "status": "ACTIVE",
+  "sraRegulated": false,
+  "superUser": {
+    "firstName": "PrivateSolicitors",
+    "lastName": "Admin",
+    "email": "admin@solicitors.com"
+  },
+  "paymentAccount": ["account1"],
+  "contactInformation": [
+    {
+      "addressLine1": "Flat 1, Private Solicitors Apartments",
+      "addressLine2": "Private Solicitors Central Square 1",
+      "townCity": "London",
+      "county": "United Kingdom",
+      "postCode": "CR0 2GE",
+      "dxAddress": []
+    }
+  ]
+}

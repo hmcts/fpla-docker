@@ -1,0 +1,22 @@
+{
+  "organisationIdentifier": "ORGSNW",
+  "name": "Wiltshire County Council",
+  "status": "ACTIVE",
+  "sraRegulated": false,
+  "superUser": {
+    "firstName": "Wiltshire",
+    "lastName": "Admin",
+    "email": "admin@mwiltshire.gov.uk"
+  },
+  "paymentAccount": ["account1"],
+  "contactInformation": [
+    {
+      "addressLine1": "Flat 1, Wiltshire Apartments",
+      "addressLine2": "Wiltshire Central Square 1",
+      "townCity": "Wiltshire",
+      "county": "United Kingdom",
+      "postCode": "CR0 2GE",
+      "dxAddress": []
+    }
+  ]
+}

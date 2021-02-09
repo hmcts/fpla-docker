@@ -1,0 +1,22 @@
+{
+  "organisationIdentifier": "ORGSA",
+  "name": "Swansea City Council",
+  "status": "ACTIVE",
+  "sraRegulated": false,
+  "superUser": {
+    "firstName": "Swansea",
+    "lastName": "Admin",
+    "email": "admin@swansea.gov.uk"
+  },
+  "paymentAccount": ["account1"],
+  "contactInformation": [
+    {
+      "addressLine1": "Flat 1, Swansea Apartments",
+      "addressLine2": "Swanse Central Square 11",
+      "townCity": "Swansea",
+      "county": "United Kingdom",
+      "postCode": "CR0 2GE",
+      "dxAddress": []
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "organisationIdentifier": "ORGHN",
+  "name": "London Borough Hillingdon",
+  "status": "ACTIVE",
+  "sraRegulated": false,
+  "superUser": {
+    "firstName": "Hillingdon",
+    "lastName": "Admin",
+    "email": "admin@hillingdon.gov.uk"
+  },
+  "paymentAccount": ["account1"],
+  "contactInformation": [
+    {
+      "addressLine1": "Flat 1, Hillingdon Apartments",
+      "addressLine2": "Hillingdon Central Square 1",
+      "townCity": "London",
+      "county": "United Kingdom",
+      "postCode": "CR0 2GE",
+      "dxAddress": []
+    }
+  ]
+}
