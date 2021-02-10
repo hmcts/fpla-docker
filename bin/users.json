@@ -21,5 +21,6 @@
   {"email": "judiciary-only@mailnesia.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-judiciary", "lastName": "(judiciary)"},
   {"email": "gatekeeper-only@mailnesia.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-gatekeeper", "lastName": "(gatekeeper)"},
   {"email": "lasol@mailinator.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-localAuthority", "lastName": "LA"},
-  {"email": "external@solicitors.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "External private solicitor"}
+  {"email": "solicitor1@solicitors.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "External private solicitor 1"},
+  {"email": "solicitor2@solicitors.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "External private solicitor 2"}
 ]
