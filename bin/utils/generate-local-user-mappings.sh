@@ -8,7 +8,9 @@ root_dir=$(realpath ${dir}/../..)
 mappings_template_dir=${root_dir}/mocks/wiremock/templates
 user_template_file=${mappings_template_dir}/userTemplate.json
 mock_user_by_email_template=${mappings_template_dir}/userByEmail.json
+mock_org_by_email_template=${mappings_template_dir}/organisationByEmail.json
 mock_user_by_email_dir=${root_dir}/mocks/wiremock/mappings/user-by-email
+mock_org_by_email_dir=${root_dir}/mocks/wiremock/mappings/prd/org-by-email
 mock_file=${root_dir}/mocks/wiremock/__files/organisationUsers.json
 mock_tmp_file=${root_dir}/mocks/wiremock/__files/organisationUsers.tmp.json
 users_file=${root_dir}/bin/users.json
@@ -60,5 +62,28 @@ function create_user_by_email_responses() {
   rm $users_ids_tmp_file
 }
 
+function create_orgs_by_email_responses() {
+  rm -rf $mock_org_by_email_dir
+  mkdir $mock_org_by_email_dir
+  echo $(get_users_email_id_mappings '@') > $users_ids_tmp_file
+
+  orgs=("swansea" "hillingdon" "swindon" "wiltshire" "solicitors")
+  for org in "${orgs[@]}"
+  do
+    for i in `seq 0 $(jq '. | length - 1' $users_file)`
+    do
+        email=$(jq -r --argjson i $i '.[$i].email' $users_file)
+
+        if [[ $email == *"@${org}"* ]]; then
+           userByEmailMappings=$(sed -e "s|\[email]|$email|" -e "s|\[org]|$org|" $mock_org_by_email_template)
+           echo $userByEmailMappings | jq '.' > "$mock_org_by_email_dir/${email}.json"
+        fi
+    done
+  done
+
+  rm $users_ids_tmp_file
+}
+
 create_mock_response swansea
 create_user_by_email_responses
+create_orgs_by_email_responses

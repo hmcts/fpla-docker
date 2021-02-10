@@ -1,0 +1,22 @@
+{
+  "organisationIdentifier": "ORGSW",
+  "name": "Swindon Borough Council",
+  "status": "ACTIVE",
+  "sraRegulated": false,
+  "superUser": {
+    "firstName": "Swindon",
+    "lastName": "Admin",
+    "email": "admin@swindon.gov.uk"
+  },
+  "paymentAccount": ["account1"],
+  "contactInformation": [
+    {
+      "addressLine1": "Flat 1, Swindon Apartments",
+      "addressLine2": "Swindon Central Square 11",
+      "townCity": "Swindon",
+      "county": "United Kingdom",
+      "postCode": "CR0 2GE",
+      "dxAddress": []
+    }
+  ]
+}
