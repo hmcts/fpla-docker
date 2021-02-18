@@ -1,0 +1,23 @@
+{
+  "request": {
+    "customMatcher" : {
+      "name" : "jwt-matcher",
+      "parameters" : {
+        "payload": {
+          "sub" : "[email]"
+        },
+        "request" : {
+          "urlPath" : "/refdata/external/v1/organisations/users",
+          "method" : "GET"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "prd/generated/[org]Users.json"
+  }
+}

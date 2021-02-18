@@ -10,7 +10,5 @@
 
 build/
 
-
-mocks/wiremock/__files/organisationUsers.json
-mocks/wiremock/mappings/user-by-email/*
-mocks/wiremock/mappings/prd/org-by-email/*
+mocks/wiremock/__files/prd/generated/*
+mocks/wiremock/mappings/prd/*
