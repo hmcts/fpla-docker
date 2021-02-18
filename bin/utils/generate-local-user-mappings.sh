@@ -9,12 +9,16 @@ mappings_template_dir=${root_dir}/mocks/wiremock/templates
 user_template_file=${mappings_template_dir}/userTemplate.json
 mock_user_by_email_template=${mappings_template_dir}/userByEmail.json
 mock_org_by_email_template=${mappings_template_dir}/organisationByEmail.json
-mock_user_by_email_dir=${root_dir}/mocks/wiremock/mappings/user-by-email
+mock_org_users_by_email_template=${mappings_template_dir}/organisationUsersByEmail.json
+mock_user_by_email_dir=${root_dir}/mocks/wiremock/mappings/prd/user-by-email
 mock_org_by_email_dir=${root_dir}/mocks/wiremock/mappings/prd/org-by-email
+mock_org_users_by_email_dir=${root_dir}/mocks/wiremock/mappings/prd/org-users-by-email
 mock_file=${root_dir}/mocks/wiremock/__files/organisationUsers.json
-mock_tmp_file=${root_dir}/mocks/wiremock/__files/organisationUsers.tmp.json
+mock_file_dir=${root_dir}/mocks/wiremock/__files/prd/generated
+mock_tmp_file=${root_dir}/mocks/wiremock/__files/prd/generated/organisationUsers.tmp.json
 users_file=${root_dir}/bin/users.json
 users_ids_tmp_file=${dir}/userIds.json.tmp
+orgs=("swansea" "hillingdon" "swindon" "wiltshire" "solicitors")
 
 function query_db() {
   docker run -e PGPASSWORD='openidm' --rm --network ccd-network postgres:11-alpine psql --host shared-db  --username openidm --tuples-only  --command "$1" openidm
@@ -25,26 +29,33 @@ function get_users_email_id_mappings() {
 }
 
 
-function create_mock_response() {
-  jq --arg organisation $1 --argjson template "$(<$user_template_file)" '[.[] | select(.email | contains($organisation)) | $template + .]' $users_file > $mock_file
-  echo $(get_users_email_id_mappings $1) > $users_ids_tmp_file
+function create_users_in_org() {
+  rm -rf $mock_file_dir
+  mkdir -p $mock_file_dir
 
-  for i in `seq 0 $(jq '. | length - 1' $mock_file)`
+  for org in "${orgs[@]}"
   do
-    email=$(jq -r --argjson i $i '.[$i].email' $mock_file)
-    user_id=$(jq -r --arg email $email '.[$email]' $users_ids_tmp_file)
-    jq -r --argjson i $i --arg user_id $user_id '.[$i].userIdentifier=$user_id | .[$i].firstName=.[$i].email | .[$i].roles|=split(",")' $mock_file > $mock_tmp_file && mv $mock_tmp_file $mock_file
+      mock_file=$mock_file_dir/${org}Users.json
+      jq --arg organisation ${org} --argjson template "$(<$user_template_file)" '[.[] | select(.email | contains($organisation)) | $template + .]' $users_file > $mock_file
+      echo $(get_users_email_id_mappings ${org}) > $users_ids_tmp_file
+
+      for i in `seq 0 $(jq '. | length - 1' $mock_file)`
+      do
+        email=$(jq -r --argjson i $i '.[$i].email' $mock_file)
+        user_id=$(jq -r --arg email $email '.[$email]' $users_ids_tmp_file)
+        jq -r --argjson i $i --arg user_id $user_id '.[$i].userIdentifier=$user_id | .[$i].firstName=.[$i].email | .[$i].roles|=split(",")' $mock_file > $mock_tmp_file && mv $mock_tmp_file $mock_file
+      done
+
+      allUsers=$(jq ". | {users: .}" $mock_file)
+      echo $allUsers | jq > $mock_file
+
+      rm $users_ids_tmp_file
   done
-
-  allUsers=$(jq ". | {users: .}" $mock_file)
-  echo $allUsers | jq > $mock_file
-
-  rm $users_ids_tmp_file
 }
 
-function create_user_by_email_responses() {
+function create_user_by_email_mapping() {
   rm -rf $mock_user_by_email_dir
-  mkdir $mock_user_by_email_dir
+  mkdir -p $mock_user_by_email_dir
   echo $(get_users_email_id_mappings '@') > $users_ids_tmp_file
 
   for i in `seq 0 $(jq '. | length - 1' $users_file)`
@@ -62,12 +73,11 @@ function create_user_by_email_responses() {
   rm $users_ids_tmp_file
 }
 
-function create_orgs_by_email_responses() {
+function create_orgs_by_email_mapping() {
   rm -rf $mock_org_by_email_dir
-  mkdir $mock_org_by_email_dir
+  mkdir -p $mock_org_by_email_dir
   echo $(get_users_email_id_mappings '@') > $users_ids_tmp_file
 
-  orgs=("swansea" "hillingdon" "swindon" "wiltshire" "solicitors")
   for org in "${orgs[@]}"
   do
     for i in `seq 0 $(jq '. | length - 1' $users_file)`
@@ -84,6 +94,28 @@ function create_orgs_by_email_responses() {
   rm $users_ids_tmp_file
 }
 
-create_mock_response swansea
-create_user_by_email_responses
-create_orgs_by_email_responses
+function create_orgs_users_by_email_mapping() {
+  rm -rf $mock_org_users_by_email_dir
+  mkdir -p $mock_org_users_by_email_dir
+  echo $(get_users_email_id_mappings '@') > $users_ids_tmp_file
+
+  for org in "${orgs[@]}"
+  do
+    for i in `seq 0 $(jq '. | length - 1' $users_file)`
+    do
+        email=$(jq -r --argjson i $i '.[$i].email' $users_file)
+
+        if [[ $email == *"@${org}"* ]]; then
+           userByEmailMappings=$(sed -e "s|\[email]|$email|" -e "s|\[org]|$org|" $mock_org_users_by_email_template)
+           echo $userByEmailMappings | jq '.' > "$mock_org_users_by_email_dir/${email}.json"
+        fi
+    done
+  done
+
+  rm $users_ids_tmp_file
+}
+
+create_users_in_org
+create_user_by_email_mapping
+create_orgs_by_email_mapping
+create_orgs_users_by_email_mapping
