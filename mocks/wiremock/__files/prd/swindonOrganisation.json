@@ -13,8 +13,10 @@
     {
       "addressLine1": "Flat 1, Swindon Apartments",
       "addressLine2": "Swindon Central Square 11",
+      "addressLine3": "40 Fleet street",
       "townCity": "Swindon",
-      "county": "United Kingdom",
+      "county": "Wiltshire",
+      "country": "United Kingdom",
       "postCode": "CR0 2GE",
       "dxAddress": []
     }

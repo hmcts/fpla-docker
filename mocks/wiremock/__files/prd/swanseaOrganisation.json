@@ -12,9 +12,11 @@
   "contactInformation": [
     {
       "addressLine1": "Flat 1, Swansea Apartments",
-      "addressLine2": "Swanse Central Square 11",
+      "addressLine2": "Swansea Central Square 11",
+      "addressLine3": "40 Fleet street",
       "townCity": "Swansea",
-      "county": "United Kingdom",
+      "county": "Swansea",
+      "country": "United Kingdom",
       "postCode": "CR0 2GE",
       "dxAddress": []
     }

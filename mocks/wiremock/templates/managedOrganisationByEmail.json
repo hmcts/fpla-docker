@@ -1,0 +1,24 @@
+{
+  "priority": 1,
+  "request": {
+    "customMatcher" : {
+      "name" : "jwt-matcher",
+      "parameters" : {
+        "payload": {
+          "sub" : "[email]"
+        },
+        "request" : {
+          "url" : "/refdata/internal/v1/organisations",
+          "method" : "GET"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "prd/swanseaOrganisation.json"
+  }
+}
