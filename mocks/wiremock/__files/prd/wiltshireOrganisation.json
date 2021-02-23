@@ -13,8 +13,10 @@
     {
       "addressLine1": "Flat 1, Wiltshire Apartments",
       "addressLine2": "Wiltshire Central Square 1",
+      "addressLine3": "40 Fleet street",
       "townCity": "Wiltshire",
-      "county": "United Kingdom",
+      "county": "Wiltshire",
+      "country": "United Kingdom",
       "postCode": "CR0 2GE",
       "dxAddress": []
     }

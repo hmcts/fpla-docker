@@ -1,0 +1,94 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/refdata/internal/v1/organisations",
+        "queryParameters": {
+          "id": {
+            "equalTo": "ORGHN"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "prd/hillingdonOrganisation.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/refdata/internal/v1/organisations",
+        "queryParameters": {
+          "id": {
+            "equalTo": "ORGEXT"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "prd/solicitorsOrganisation.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/refdata/internal/v1/organisations",
+        "queryParameters": {
+          "id": {
+            "equalTo": "ORGSA"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "prd/swanseaOrganisation.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/refdata/internal/v1/organisations",
+        "queryParameters": {
+          "id": {
+            "equalTo": "ORGSW"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "prd/swindonOrganisation.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/refdata/internal/v1/organisations",
+        "queryParameters": {
+          "id": {
+            "equalTo": "ORGSNW"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "prd/wiltshireOrganisation.json"
+      }
+    }
+  ]
+}

@@ -13,8 +13,10 @@
     {
       "addressLine1": "Flat 1, Private Solicitors Apartments",
       "addressLine2": "Private Solicitors Central Square 1",
+      "addressLine3": "40 Fleet street",
       "townCity": "London",
-      "county": "United Kingdom",
+      "county": "Greater London",
+      "country": "United Kingdom",
       "postCode": "CR0 2GE",
       "dxAddress": []
     }

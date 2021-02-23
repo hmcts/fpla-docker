@@ -13,8 +13,10 @@
     {
       "addressLine1": "Flat 1, Hillingdon Apartments",
       "addressLine2": "Hillingdon Central Square 1",
+      "addressLine3": "40 Fleet street",
       "townCity": "London",
-      "county": "United Kingdom",
+      "county": "Middlesex",
+      "country": "United Kingdom",
       "postCode": "CR0 2GE",
       "dxAddress": []
     }
