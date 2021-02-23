@@ -9,18 +9,15 @@ mappings_template_dir=${root_dir}/mocks/wiremock/templates
 user_template_file=${mappings_template_dir}/userTemplate.json
 mock_user_by_email_template=${mappings_template_dir}/userByEmail.json
 mock_org_by_email_template=${mappings_template_dir}/organisationByEmail.json
-mock_managed_org_by_email_template=${mappings_template_dir}/managedOrganisationByEmail.json
 mock_org_users_by_email_template=${mappings_template_dir}/organisationUsersByEmail.json
 mock_user_by_email_dir=${root_dir}/mocks/wiremock/mappings/prd/user-by-email
 mock_org_by_email_dir=${root_dir}/mocks/wiremock/mappings/prd/org-by-email
-mock_managed_org_by_email_dir=${root_dir}/mocks/wiremock/mappings/prd/managed-org-by-email
 mock_org_users_by_email_dir=${root_dir}/mocks/wiremock/mappings/prd/org-users-by-email
 mock_file=${root_dir}/mocks/wiremock/__files/organisationUsers.json
 mock_file_dir=${root_dir}/mocks/wiremock/__files/prd/generated
 mock_tmp_file=${root_dir}/mocks/wiremock/__files/prd/generated/organisationUsers.tmp.json
 users_file=${root_dir}/bin/users.json
 users_ids_tmp_file=${dir}/userIds.json.tmp
-solicitors_emails=("solicitor1@solicitors.uk" "solicitor2@solicitors.uk")
 orgs=("swansea" "hillingdon" "swindon" "wiltshire" "solicitors")
 
 function query_db() {
@@ -97,20 +94,6 @@ function create_orgs_by_email_mapping() {
   rm $users_ids_tmp_file
 }
 
-function create_managed_orgs_by_email_mapping() {
-  rm -rf $mock_managed_org_by_email_dir
-  mkdir -p $mock_managed_org_by_email_dir
-  echo $(get_users_email_id_mappings '@') > $users_ids_tmp_file
-
-  for email in "${solicitors_emails[@]}"
-  do
-    userByEmailMappings=$(sed -e "s|\[email]|$email|" -e "s|\[org]|$org|" $mock_managed_org_by_email_template)
-    echo $userByEmailMappings | jq '.' > "$mock_managed_org_by_email_dir/${email}.json"
-  done
-
-  rm $users_ids_tmp_file
-}
-
 function create_orgs_users_by_email_mapping() {
   rm -rf $mock_org_users_by_email_dir
   mkdir -p $mock_org_users_by_email_dir
@@ -135,5 +118,4 @@ function create_orgs_users_by_email_mapping() {
 create_users_in_org
 create_user_by_email_mapping
 create_orgs_by_email_mapping
-create_managed_orgs_by_email_mapping
 create_orgs_users_by_email_mapping
