@@ -1,0 +1,77 @@
+[
+  {
+    "name": "London Borough Hillingdon",
+    "organisationIdentifier": "ORGHN",
+    "contactInformation": [
+      {
+        "addressLine1": "Flat 1, Hillingdon Apartments",
+        "addressLine2": "Hillingdon Central Square 1",
+        "addressLine3": "40 Fleet street",
+        "townCity": "London",
+        "county": "Middlesex",
+        "country": "United Kingdom",
+        "postCode": "CR0 2GE"
+      }
+    ]
+  },
+  {
+    "name": "Swansea City Council",
+    "organisationIdentifier": "ORGSA",
+    "contactInformation": [
+      {
+        "addressLine1": "Flat 1, Swansea Apartments",
+        "addressLine2": "Swansea Central Square 11",
+        "addressLine3": "40 Fleet street",
+        "townCity": "Swansea",
+        "county": "Swansea",
+        "country": "United Kingdom",
+        "postCode": "CR0 2GE"
+      }
+    ]
+  },
+  {
+    "name": "Private solicitors",
+    "organisationIdentifier": "ORGEXT",
+    "contactInformation": [
+      {
+        "addressLine1": "Flat 1, Private Solicitors Apartments",
+        "addressLine2": "Private Solicitors Central Square 1",
+        "addressLine3": "40 Fleet street",
+        "townCity": "London",
+        "county": "Greater London",
+        "country": "United Kingdom",
+        "postCode": "CR0 2GE"
+      }
+    ]
+  },
+  {
+    "name": "Swindon Borough Council",
+    "organisationIdentifier": "ORGSW",
+    "contactInformation": [
+      {
+        "addressLine1": "Flat 1, Swindon Apartments",
+        "addressLine2": "Swindon Central Square 11",
+        "addressLine3": "40 Fleet street",
+        "townCity": "Swindon",
+        "county": "Swindon",
+        "country": "United Kingdom",
+        "postCode": "CR0 2GE"
+      }
+    ]
+  },
+  {
+    "name": "Wiltshire County Council",
+    "organisationIdentifier": "ORGSNW",
+    "contactInformation": [
+      {
+        "addressLine1": "Flat 1, Wiltshire Apartments",
+        "addressLine2": "Wiltshire Central Square 1",
+        "addressLine3": "40 Fleet street",
+        "townCity": "Wiltshire",
+        "county": "Wiltshire",
+        "country": "United Kingdom",
+        "postCode": "CR0 2GE"
+      }
+    ]
+  }
+]
