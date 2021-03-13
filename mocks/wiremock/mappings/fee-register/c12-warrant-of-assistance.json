@@ -19,7 +19,7 @@
         "equalTo": "HIJ"
       },
       "service": {
-        "equalTo": "other"
+        "equalTo": "private law"
       }
     }
   },
@@ -28,6 +28,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "body": "{\"code\": \"FEE0324\", \"description\": \"Recovery order (section 50)\", \"version\": 1, \"fee_amount\": 215}"
+    "body": "{\"code\": \"FEE0324\", \"description\": \"Warrant to assist person exercising powers to search for children or inspect premises (section 102)\", \"version\": 1, \"fee_amount\": 215}"
   }
 }
