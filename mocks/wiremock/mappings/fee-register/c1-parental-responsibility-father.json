@@ -1,0 +1,33 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/fees-register/fees/lookup",
+    "queryParameters": {
+      "channel": {
+        "equalTo": "default"
+      },
+      "event": {
+        "equalTo": "miscellaneous"
+      },
+      "jurisdiction1": {
+        "equalTo": "family"
+      },
+      "jurisdiction2": {
+        "equalTo": "family court"
+      },
+      "keyword": {
+        "equalTo": "XYZ"
+      },
+      "service": {
+        "equalTo": "private law"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"code\": \"FEE0338\", \"description\": \"Parental responsibility (section 4ZA(1)(c) or (6))\", \"version\": 1, \"fee_amount\": 215}"
+  }
+}
