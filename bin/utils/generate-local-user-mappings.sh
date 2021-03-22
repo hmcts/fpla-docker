@@ -18,9 +18,10 @@ mock_file_dir=${root_dir}/mocks/wiremock/__files/prd/generated
 mock_tmp_file=${root_dir}/mocks/wiremock/__files/prd/generated/organisationUsers.tmp.json
 users_file=${root_dir}/bin/users.json
 users_ids_tmp_file=${dir}/userIds.json.tmp
+org_ids_file=${root_dir}/resources/org_id_mapping.json
 orgs=("swansea" "hillingdon" "swindon" "wiltshire" "solicitors")
 
-function query_db() {
+query_db() {
   docker run -e PGPASSWORD='openidm' --rm --network ccd-network postgres:11-alpine psql --host shared-db  --username openidm --tuples-only  --command "$1" openidm
 }
 
@@ -28,8 +29,7 @@ function get_users_email_id_mappings() {
   query_db "SELECT json_object(array_agg(fullobject->>'mail'), array_agg(fullobject->>'_id')) FROM managedObjects WHERE fullobject->>'mail' IS NOT NULL AND fullobject->>'userName' LIKE '%$1%';"
 }
 
-
-function create_users_in_org() {
+create_users_in_org() {
   rm -rf $mock_file_dir
   mkdir -p $mock_file_dir
 
@@ -46,14 +46,15 @@ function create_users_in_org() {
         jq -r --argjson i $i --arg user_id $user_id '.[$i].userIdentifier=$user_id | .[$i].firstName=.[$i].email | .[$i].roles|=split(",")' $mock_file > $mock_tmp_file && mv $mock_tmp_file $mock_file
       done
 
-      allUsers=$(jq ". | {users: .}" $mock_file)
+      org_id=$(jq ".${org}" $org_ids_file)
+      allUsers=$(jq ". | {organisationIdentifier: ${org_id}, users: .}" $mock_file)
       echo $allUsers | jq > $mock_file
 
       rm $users_ids_tmp_file
   done
 }
 
-function create_user_by_email_mapping() {
+create_user_by_email_mapping() {
   rm -rf $mock_user_by_email_dir
   mkdir -p $mock_user_by_email_dir
   echo $(get_users_email_id_mappings '@') > $users_ids_tmp_file
@@ -73,7 +74,7 @@ function create_user_by_email_mapping() {
   rm $users_ids_tmp_file
 }
 
-function create_orgs_by_email_mapping() {
+create_orgs_by_email_mapping() {
   rm -rf $mock_org_by_email_dir
   mkdir -p $mock_org_by_email_dir
   echo $(get_users_email_id_mappings '@') > $users_ids_tmp_file
@@ -94,7 +95,7 @@ function create_orgs_by_email_mapping() {
   rm $users_ids_tmp_file
 }
 
-function create_orgs_users_by_email_mapping() {
+create_orgs_users_by_email_mapping() {
   rm -rf $mock_org_users_by_email_dir
   mkdir -p $mock_org_users_by_email_dir
   echo $(get_users_email_id_mappings '@') > $users_ids_tmp_file
@@ -116,6 +117,6 @@ function create_orgs_users_by_email_mapping() {
 }
 
 create_users_in_org
-create_user_by_email_mapping
-create_orgs_by_email_mapping
-create_orgs_users_by_email_mapping
+#create_user_by_email_mapping
+#create_orgs_by_email_mapping
+#create_orgs_users_by_email_mapping
