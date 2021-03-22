@@ -22,5 +22,8 @@
   {"email": "gatekeeper-only@mailnesia.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-gatekeeper", "lastName": "(gatekeeper)"},
   {"email": "lasol@mailinator.com", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-localAuthority", "lastName": "LA"},
   {"email": "solicitor1@solicitors.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "External private solicitor 1"},
-  {"email": "solicitor2@solicitors.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "External private solicitor 2"}
+  {"email": "solicitor2@solicitors.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "External private solicitor 2"},
+  {"email": "caa-caseworker@mailnesia.com", "roles": "caseworker-caa", "lastName": "CAA-System"},
+  {"email": "approver-noc@mailnesia.com", "roles": "caseworker-approver, prd-aac-system", "lastName": "Approver-NoC"},
+  {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker-approver, prd-aac-system", "lastName": "Approver-System"}
 ]

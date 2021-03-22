@@ -14,12 +14,15 @@ ${dir}/utils/idam-add-role.sh "pui-case-manager"
 ${dir}/utils/idam-create-caseworker.sh "ccd.docker.default@hmcts.net" "ccd-import"
 
 # Cross jurisdictions caseworkers
-roles=("caa")
+roles=("caa" "approver")
 for role in "${roles[@]}"
 do
   ${dir}/utils/idam-add-role.sh "caseworker-${role}"
   ${dir}/utils/ccd-add-role.sh "caseworker-${role}"
 done
+
+${dir}/utils/idam-add-role.sh "prd-aac-system"
+${dir}/utils/ccd-add-role.sh "prd-aac-system"
 
 # publiclaw jurisdiction caseworkers
 roles=("solicitor" "courtadmin" "cafcass" "magistrate" "gatekeeper" "systemupdate" "judiciary" "bulkscan" "bulkscansystemupdate" "localAuthority" "superuser")
