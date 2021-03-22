@@ -117,6 +117,6 @@ create_orgs_users_by_email_mapping() {
 }
 
 create_users_in_org
-#create_user_by_email_mapping
-#create_orgs_by_email_mapping
-#create_orgs_users_by_email_mapping
+create_user_by_email_mapping
+create_orgs_by_email_mapping
+create_orgs_users_by_email_mapping
