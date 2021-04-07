@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/refdata/internal/v1/organisations/[id]/users?returnRoles=false"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "prd/generated/[org]Users.json"
+  }
+}

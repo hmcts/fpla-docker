@@ -12,3 +12,5 @@ ${dir}/utils/idam-create-service.sh "xui_webapp" "xui_webapp" "OOOOOOOOOOOOOOOO"
 
 ${dir}/utils/idam-create-service.sh "adoption" "adoption" "adoption" "https://localhost:3000/landing" "true"
 
+${dir}/utils/idam-create-service.sh "aac_manage_case_assignment" "aac_manage_case_assignment" "AACAACAACAACAACA" "https://manage-case-assignment/oauth2redirect" "false" "profile openid roles manage-user"
+
