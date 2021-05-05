@@ -277,6 +277,7 @@ function active_compose_files() {
 }
 
 function create_compose_file_options() {
+    compose_file_options="$compose_file_options --env-file ./.env"
     for compose_file in $(active_compose_files)
     do
             compose_file_options="$compose_file_options -f compose/${compose_file}.yml"
