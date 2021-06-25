@@ -70,6 +70,12 @@ To add users:
 
 To enable stubbing of the ```PROXY_PAYMENTS``` set the ```PROXY_PAYMENTS_STUB``` environment variable to the desired url.
 
+
+Add entry to /etc/hosts
+```
+127.0.0.1   ccd-api-gateway
+```
+
 ## Elastic search
 
 ### Information

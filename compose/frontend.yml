@@ -80,13 +80,14 @@ services:
       ADDRESS_LOOKUP_TOKEN:
       PROXY_AGGREGATED: http://ccd-data-store-api:4452
       PROXY_DATA: http://ccd-data-store-api:4452
-      PROXY_CASE_ACTIVITY: http://host.docker.internal:3460
+      PROXY_CASE_ACTIVITY: http://host.docker.internal:8765
       PROXY_PRINT_SERVICE: http://host.docker.internal:3200
       PROXY_PAYMENTS: "${PROXY_PAYMENTS_STUB:-http://localhost:9999/payments}"
       PROXY_DEFINITION_IMPORT: http://ccd-definition-store-api:4451
       PROXY_DEFINITION_DATA: http://ccd-definition-store-api:4451/api/data
       PROXY_DEFINITION_DISPLAY: http://ccd-definition-store-api:4451/api/display
       APPINSIGHTS_INSTRUMENTATIONKEY: key
+      CORS_ORIGIN_WHITELIST: "*"
     ports:
       - 3453:3453
     depends_on:
