@@ -25,5 +25,6 @@
   {"email": "solicitor2@solicitors.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "External private solicitor 2"},
   {"email": "caa-caseworker@mailnesia.com", "roles": "caseworker-caa", "lastName": "CAA-System"},
   {"email": "approver-noc@mailnesia.com", "roles": "caseworker-approver, prd-aac-system", "lastName": "Approver-NoC"},
-  {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker-approver, prd-aac-system", "lastName": "Approver-System"}
+  {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker-approver, prd-aac-system", "lastName": "Approver-System"},
+  {"email": "ccd-system-user@mailinator.com", "roles": "caseworker", "lastName": "(ccd-sys-user)"}
 ]
