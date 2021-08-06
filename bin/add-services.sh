@@ -16,3 +16,4 @@ ${dir}/utils/idam-create-service.sh "adoption" "adoption" "adoption" "https://lo
 
 ${dir}/utils/idam-create-service.sh "aac_manage_case_assignment" "aac_manage_case_assignment" "AACAACAACAACAACA" "https://manage-case-assignment/oauth2redirect" "false" "profile openid roles manage-user"
 
+${dir}/utils/idam-create-service.sh "ccd_case_document_am_api" "ccd_case_document_am_api" "CDAMCDAMCDAMCDAM" "https://ccd-case-document-am-api/oauth2redirect" "false" "profile openid roles manage-user"
