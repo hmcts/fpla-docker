@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TAGS_FILE=".tags.env"
 WORKSPACE_ROOT=".workspace"
@@ -309,7 +309,7 @@ function active_compose_files() {
 }
 
 function create_compose_file_options() {
-    compose_file_options="$compose_file_options --env-file ./.env"
+    compose_file_options="$compose_file_options"
     for compose_file in $(active_compose_files)
     do
       if [ ${compose_file} != "logstash" ]; then

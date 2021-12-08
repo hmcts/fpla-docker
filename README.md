@@ -25,6 +25,15 @@
 
 *The following documentation assumes that the current directory is `ccd-docker`.*
 
+## Clean slate
+To reset your local env so it's totally clean, run the following:
+```bash
+./ccd compose down --volumes
+docker system prune -a
+docker rm -f $(docker ps -a -q)
+docker system prune -a
+```
+
 ## Quick start
 
 Checkout `ccd-docker` project:
