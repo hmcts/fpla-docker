@@ -79,6 +79,12 @@ Creating and starting the containers:
 ./ccd compose up -d
 ```
 
+Note:
+Using Expert UI by default. If you need CCD UI service you can start it with below command
+```bash
+./ccd compose up --scale ccd-case-management-web=1 -d
+```
+
 Usage and commands available:
 
 ```bash
@@ -160,6 +166,31 @@ At this point most users can run the following 4 scripts
 ./bin/add-ccd-roles.sh
 ./bin/add-role-assignments.sh
 ```
+
+#### FPLA Specific
+Scripts to create FPLA test users and import FPLA CCD definitions are located in bin directory.
+
+To add services:
+
+```
+ IDAM_ADMIN_USER=<enter email> IDAM_ADMIN_PASSWORD=<enter password> ./bin/add-services.sh
+```
+
+To add roles required to import ccd definition:
+
+```
+ IDAM_ADMIN_USER=<enter email> IDAM_ADMIN_PASSWORD=<enter password> ./bin/add-roles.sh
+```
+
+To add users:
+
+```
+ IDAM_ADMIN_USER=<enter email> IDAM_ADMIN_PASSWORD=<enter password> ./bin/add-users.sh
+```
+
+`IDAM_ADMIN_USER` and `IDAM_ADMIN_PASSWORD` details can be found on confluence.
+
+To enable stubbing of the ```PROXY_PAYMENTS``` set the ```PROXY_PAYMENTS_STUB``` environment variable to the desired url.
 
 to get their IDAM environment ready and then move on to the [Ready for take-off](###Ready-for-take-off) section.
 
