@@ -10,6 +10,12 @@ uploadFilename="$(date +"%Y%m%d-%H%M%S")-${filename}"
 userToken=$(${dir}/idam-lease-user-token.sh ${CCD_CONFIGURER_IMPORTER_USERNAME:-ccd.docker.default@hmcts.net} ${CCD_CONFIGURER_IMPORTER_PASSWORD:-Password12})
 serviceToken=$(${dir}/idam-lease-service-token.sh ccd_gw $(docker run --rm toolbelt/oathtool --totp -b ${CCD_API_GATEWAY_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
 
+useShutteredCaseDef=$(${USE_SHUTTERED_CASE_DEF:-0})
+if [[ "$useShutteredCaseDef" == "1" ]]; then
+  echo "Using Shuttered Case Definition File"
+  uploadFilename=`echo $uploadFilename | sed 's/\.xlsx/-shuttered\.xlsx/'`
+fi
+
 uploadResponse=$(curl --insecure --silent -w "\n%{http_code}" --show-error -X POST \
   ${CCD_DEFINITION_STORE_API_BASE_URL:-http://localhost:4451}/import \
   -H "Authorization: Bearer ${userToken}" \
@@ -43,3 +49,4 @@ fi
 
 echo "${filename} (${uploadFilename}) upload failed (${upload_response_content})"
 exit 1;
+
