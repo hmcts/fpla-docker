@@ -2,7 +2,7 @@
 
 set -eu
 
-definition_processor_version=dbd1s6
+definition_processor_version=dbj2dr
 
 definition_dir=${1}
 definition_output_file=${2}
