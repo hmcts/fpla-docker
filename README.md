@@ -94,9 +94,8 @@ Usage and commands available:
 ## Setting up environment variables
 Environment variables for CCD Data Store API and CCD Definition Store API can be done by executing the following script.
 
-Windows : `./bin/set-environment-variables.sh`
-
-Mac : `source ./bin/set-environment-variables.sh`
+`source ./bin/env_variables_all.sh`
+`source ./compose/.env`
 
 Note: some users of zsh 'Oh My Zsh' experienced issues. Try switching to bash for this step
 
@@ -414,10 +413,10 @@ This script runs the checks below, for each user defined in the `am-role-assignm
 ```bash
 if overrideAll flag is true
     delete any existing role assignments for the user
-else 
+else
     do nothing
 
-then 
+then
     create all user's assignments
 ```
 
