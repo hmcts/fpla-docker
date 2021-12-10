@@ -148,8 +148,8 @@ However, some more steps are required to correctly configure SIDAM and CCD befor
 All scripts require the following environment variables to be set
 
 ```bash
-IDAM_ADMIN_USER
-IDAM_ADMIN_PASSWORD
+export IDAM_ADMIN_USER=idamOwner@hmcts.net
+export IDAM_ADMIN_PASSWORD=Ref0rmIsFun
 ```
 
 with the corresponding values from the confluence page at https://tools.hmcts.net/confluence/x/eQP3P
@@ -159,11 +159,7 @@ with the corresponding values from the confluence page at https://tools.hmcts.ne
 At this point most users can run the following 4 scripts
 
 ```bash
-./bin/add-idam-clients.sh
-./bin/add-idam-roles.sh
-./bin/add-users.sh
-./bin/add-ccd-roles.sh
-./bin/add-role-assignments.sh
+./bin/add-idam-clients.sh && ./bin/add-idam-roles.sh && ./bin/add-users.sh && ./bin/add-ccd-roles.sh && ./bin/add-role-assignments.sh
 ```
 
 #### FPLA Specific
