@@ -168,13 +168,13 @@ Scripts to create FPLA test users and import FPLA CCD definitions are located in
 To add services:
 
 ```
- IDAM_ADMIN_USER=<enter email> IDAM_ADMIN_PASSWORD=<enter password> ./bin/add-services.sh
+ ./bin/add-services.sh
 ```
 
 To add roles required to import ccd definition:
 
 ```
- IDAM_ADMIN_USER=<enter email> IDAM_ADMIN_PASSWORD=<enter password> ./bin/add-roles.sh
+ ./bin/add-roles.sh
 ```
 
 To add users:
