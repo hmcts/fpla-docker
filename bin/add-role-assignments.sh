@@ -3,6 +3,7 @@
 set -eu
 
 dir=$(dirname ${0})
+dbPort=$DB_EXTERNAL_PORT
 
 jq -c '(.[])' ${dir}/am-role-assignments.json | while read user; do
   email=$(jq -r '.email' <<< $user)
@@ -12,7 +13,7 @@ jq -c '(.[])' ${dir}/am-role-assignments.json | while read user; do
   override=$(jq -r '.overrideAll' <<< $user)
   if [ $override == 'true' ]; then
     echo "Removing all existing role assignments for user ${email}"
-    psql -h localhost -p ${DB_EXTERNAL_PORT} -d role_assignment -U ccd -c "DELETE FROM role_assignment WHERE actor_id = '${idamId}'" -q
+    psql -h localhost -p ${dbPort} -d role_assignment -U ccd -c "DELETE FROM role_assignment WHERE actor_id = '${idamId}'" -q
   fi
 
   jq -c '(.roleAssignments[])' <<< $user | while read assignment; do
@@ -25,7 +26,7 @@ jq -c '(.[])' ${dir}/am-role-assignments.json | while read user; do
     attributes=$(jq -r '.attributes | tostring' <<< $assignment)
 
     authorisations=$(jq -r 'if .authorisations | length > 0 then "'"'"'{" + (.authorisations | join(",")) + "}'"'"'" else null end' <<< $assignment)
-    
+
     echo "Creating '${roleName}' assignment of type '${roleType}' for user ${email}"
     ${dir}/utils/am-add-role-assignment.sh $idamId $roleType $roleName $classification $grantType $roleCategory $readOnly $attributes $authorisations
   done
