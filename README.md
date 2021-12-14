@@ -180,7 +180,7 @@ To add roles required to import ccd definition:
 To add users:
 
 ```
- IDAM_ADMIN_USER=<enter email> IDAM_ADMIN_PASSWORD=<enter password> ./bin/add-users.sh
+ ./bin/add-users.sh
 ```
 
 `IDAM_ADMIN_USER` and `IDAM_ADMIN_PASSWORD` details can be found on confluence.
