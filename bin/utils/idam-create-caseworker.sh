@@ -15,9 +15,9 @@ create_user_request() {
       -H "Content-Type: application/json" \
       -d '{
           "email":"'"${email}"'",
-          "forename":"'"${email}"'",
+          "forename":"'"${firstName}"'",
           "surname":"'"${surname}"'",
-          "password":"Password12",
+          "password":"Pa55word11",
           "levelOfAccess":1,
           "roles": [
             '"${rolesJson}"'
@@ -85,6 +85,7 @@ fi
 email=${1}
 rolesStr=${2}
 surname=${3:-"Tester"}
+firstName=${4:-${email}}
 
 IFS=',' read -ra roles <<<"${rolesStr}"
 

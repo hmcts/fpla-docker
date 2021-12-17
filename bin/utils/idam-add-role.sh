@@ -26,7 +26,7 @@ STATUS=$(curl --silent --output /dev/null --write-out '%{http_code}' -H 'Content
 if [ $STATUS -eq 201 ]; then
   echo "Role created sucessfully"
 elif [ $STATUS -eq 409 ]; then
-  echo "Role already exists!"
+  echo "Role '${ID}' already exists!"
 else
   echo "ERROR: HTTPCODE = $STATUS"
   exit 1
