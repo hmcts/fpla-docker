@@ -94,7 +94,6 @@ services:
       ELASTIC_SEARCH_HOSTS: ccd-elasticsearch:9200
       ELASTIC_SEARCH_DATA_NODES_HOSTS: "http://ccd-elasticsearch:9200"
       CCD_DEFAULTPRINTURL: https://return-case-doc-ccd.nonprod.platform.hmcts.net/jurisdictions/:jid/case-types/:ctid/cases/:cid
-      CCD_DOCUMENT_URL_PATTERN: "${CCD_DOCUMENT_URL_PATTERN}"
       ENABLE_ATTRIBUTE_BASED_ACCESS_CONTROL: "${ENABLE_ATTRIBUTE_BASED_ACCESS_CONTROL:-false}"
       ENABLE_PSEUDO_ROLE_ASSIGNMENTS_GENERATION: "${ENABLE_PSEUDO_ROLE_ASSIGNMENTS_GENERATION:-false}"
       ENABLE_PSEUDO_ACCESS_PROFILES_GENERATION: "${ENABLE_PSEUDO_ACCESS_PROFILES_GENERATION:-false}"
@@ -135,7 +134,7 @@ services:
       ROLE_ASSIGNMENT_DB_PASSWORD: "${DB_PASSWORD}"
       ROLE_ASSIGNMENT_DB_OPTIONS:
       AM_ROLE_ASSIGNMENT_SERVICE_SECRET: "${IDAM_KEY_AM_ROLE_ASSIGNMENT}"
-      LD_SDK_KEY:
+      LD_SDK_KEY: "${AM_LD_SDK_KEY}"
       ROLE_ASSIGNMENT_IDAM_KEY:
       ROLE_ASSIGNMENT_TOKEN_SECRET:
       ROLE_ASSIGNMENT_S2S_AUTHORISED_SERVICES: ccd_gw,am_role_assignment_service,am_org_role_mapping_service,wa_task_management_api,xui_webapp,ccd_data,fpl_case_service
