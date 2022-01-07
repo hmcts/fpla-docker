@@ -20,7 +20,7 @@ services:
       IDAM_SYSTEM_USER_PASSWORD: "Pa55word11"
       IDAM_URL: http://idam-api:5000
       S2S_URL: http://service-auth-provider-api:8080
-      MANAGE_CASE_S2S_KEY: "${IDAM_KEY_AAC_MANAGE_CASE_ASSIGNMENT}"
+      MANAGE_CASE_S2S_KEY: "${BEFTA_S2S_CLIENT_SECRET_OF_AAC_MANAGE_CASE_ASSIGNMENT}"
       MANAGE_CASE_S2S_AUTHORISED_SERVICES: ccd_gw,xui_webapp,ccd_data,fpl_case_service
       CCD_DATA_STORE_API_BASE_URL: http://ccd-data-store-api:4452
       CCD_DATA_STORE_ALLOWED_SERVICE: ccd_gw
