@@ -21,7 +21,9 @@ services:
       SERVICES_PAYMENTS_URL: http://wiremock:8080
       SERVICES_CCD_CASE_ASSIGNMENT_API: http://manage-case-assignment:4454
       SERVICES_PRD_API: http://wiremock:8080
-
+      SERVICES_ROLE_ASSIGNMENT_API: http://am-role-assignment-service:4096
+      HEALTH_ROLE_ASSIGNMENT_API: http://am-role-assignment-service:4096/health
+      
       SERVICES_EM_ANNO_API: http://ccd-api-gateway:3453
       REDISCLOUD_URL: http://dummyrediscloudurl
 
