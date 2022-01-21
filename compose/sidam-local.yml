@@ -42,7 +42,7 @@ services:
       - IDAM_SPI_FORGEROCK_AM_ROOT=http://fr-am:8080/openam
       - IDAM_SPI_FORGEROCK_AM_TOPLEVELHOST=fr-am
       - IDAM_SPI_FORGEROCK_AM_USERNAME=amadmin
-      - IDAM_SPI_FORGEROCK_AM_PASSWORD=Pa55word11
+      - IDAM_SPI_FORGEROCK_AM_PASSWORD=Password12
       - IDAM_SPI_FORGEROCK_AM_JWKSURIFOROAUTH2CLIENTS=http://fr-am:8080/openam/oauth2/hmcts/connect/jwk_uri
       - IDAM_SPI_FORGEROCK_IDM_ROOT=http://fr-idm:18080/openidm
       - IDAM_SPI_FORGEROCK_IDM_USERNAME=openidm-admin
