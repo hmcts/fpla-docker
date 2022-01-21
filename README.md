@@ -376,7 +376,7 @@ Alternatively, add a user to SIDAM by using the script
 LAST_NAME if omitted defaults to `TesterLastName`
 FIRST_NAME if omitted defaults to `TesterFirstname`
 
-Password for each user created by the script defaults to `Password12`
+Password for each user created by the script defaults to `Pa55word11`
 
 ---
 You may verify the service has been added by logging in to the SIDAM Web Admin with the URL and
@@ -451,7 +451,7 @@ Then the indicated role, here `caseworker-cmc-loa1`, must be added to CCD (See [
 ### Ready for take-off 🛫
 
 Back to [http://localhost:3451](http://localhost:3451), you can now log in with any of the email addresses defined when adding users in [3. Create Users](#3.-Create-users).
-All user passwords default to : `Password12`.
+All user passwords default to : `Pa55word11`.
 
 If you see only a grey screen after entering your user credentials in the login page, you may need to set profile settings in ccd_user_profile database by adding a single line for the user in the below tables:
 
