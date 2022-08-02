@@ -41,3 +41,5 @@ do
 done
 
 ${dir}/utils/ccd-add-role.sh "citizen"
+
+${dir}/utils/ccd-add-role.sh "GS_profile"
