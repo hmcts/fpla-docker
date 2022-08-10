@@ -8,6 +8,7 @@ ${dir}/utils/idam-add-role.sh "ccd-import"
 ${dir}/utils/idam-add-role.sh "caseworker"
 ${dir}/utils/idam-add-role.sh "caseworker-publiclaw"
 ${dir}/utils/idam-add-role.sh "caseworker-adoption"
+${dir}/utils/idam-add-role.sh "caseworker-befta_master"
 ${dir}/utils/idam-add-role.sh "pui-case-manager"
 
 # User used during the CCD import and ccd-role creation
