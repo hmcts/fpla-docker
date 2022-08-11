@@ -3,7 +3,7 @@ version: '2.4'
 
 services:
   xui:
-    image: "my-build:2"
+    image: "my-build:3"
     environment:
       MICROSERVICE: xui_webapp
       PROTOCOL: http
