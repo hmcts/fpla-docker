@@ -40,4 +40,3 @@ services:
     depends_on:
       idam-api:
         condition: service_started
-    scale: 0
