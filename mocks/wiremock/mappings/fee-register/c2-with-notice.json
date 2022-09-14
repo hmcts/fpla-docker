@@ -16,7 +16,7 @@
         "equalTo": "family court"
       },
       "keyword": {
-        "equalTo": "notice"
+        "equalTo": "GAOnNotice"
       },
       "service": {
         "equalTo": "other"
