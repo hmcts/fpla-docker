@@ -16,7 +16,7 @@ if [[ "$useShutteredCaseDef" == "1" ]]; then
   uploadFilename=`echo $uploadFilename | sed 's/\.xlsx/-shuttered\.xlsx/'`
 fi
 
-uploadResponse=$(curl --insecure --silent -w "\n%{http_code}" --show-error -X POST \
+uploadResponse=$(curl --http1.1 --insecure --silent -w "\n%{http_code}" --show-error -X POST \
   ${CCD_DEFINITION_STORE_API_BASE_URL:-http://localhost:4451}/import \
   -H "Authorization: Bearer ${userToken}" \
   -H "ServiceAuthorization: Bearer ${serviceToken}" \
