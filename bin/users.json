@@ -1,5 +1,5 @@
 [
-  {"email": "damian@swansea.gov.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager,caseworker-befta_master", "lastName": "(local-authority)"},
+  {"email": "damian@swansea.gov.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "(local-authority)"},
   {"email": "kurt@swansea.gov.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "(local-authority)"},
   {"email": "james@swansea.gov.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "(local-authority)"},
   {"email": "sam@hillingdon.gov.uk", "roles": "caseworker,caseworker-publiclaw,caseworker-publiclaw-solicitor,pui-case-manager", "lastName": "(local-authority)"},
