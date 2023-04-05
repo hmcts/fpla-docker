@@ -9,6 +9,8 @@ ${dir}/utils/idam-add-role.sh "caseworker"
 ${dir}/utils/idam-add-role.sh "caseworker-publiclaw"
 ${dir}/utils/idam-add-role.sh "caseworker-adoption"
 ${dir}/utils/idam-add-role.sh "pui-case-manager"
+${dir}/utils/idam-add-role.sh "caseworker-wa-task-configuration"
+${dir}/utils/idam-add-role.sh "caseworker-ras-validation"
 
 # User used during the CCD import and ccd-role creation
 ${dir}/utils/idam-create-caseworker.sh "ccd.docker.default@hmcts.net" "ccd-import"
