@@ -7,8 +7,11 @@ filepath=${1}
 filename=$(basename ${filepath})
 uploadFilename="$(date +"%Y%m%d-%H%M%S")-${filename}"
 
+echo "Getting userToken and serviceToken"
 userToken=$(${dir}/idam-lease-user-token.sh ${CCD_CONFIGURER_IMPORTER_USERNAME:-ccd.docker.default@hmcts.net} ${CCD_CONFIGURER_IMPORTER_PASSWORD:-Password12})
+echo ">>> Got userToken"
 serviceToken=$(${dir}/idam-lease-service-token.sh ccd_gw $(docker run --rm toolbelt/oathtool --totp -b ${CCD_API_GATEWAY_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
+echo ">>> Got serviceToken"
 
 useShutteredCaseDef=${USE_SHUTTERED_CASE_DEF:-0}
 if [[ "$useShutteredCaseDef" == "1" ]]; then
