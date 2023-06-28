@@ -41,3 +41,7 @@ do
 done
 
 ${dir}/utils/ccd-add-role.sh "citizen"
+
+${dir}/utils/ccd-add-role.sh "GS_profile"
+${dir}/utils/ccd-add-role.sh "caseworker-wa-task-configuration"
+${dir}/utils/ccd-add-role.sh "caseworker-ras-validation"
